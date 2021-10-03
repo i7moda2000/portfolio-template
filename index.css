@@ -1,0 +1,212 @@
+/* ************************* */
+/* Basic SETUP */
+/* ************************* */
+
+:root {
+  --background-img: url(./images/headerBg.webp);
+  --font-size-normal: 1.6em;
+  --font-size-small: 0.8em;
+  --font-color: #fff;
+  --link-color: #fff;
+  --link-hover-color: #000;
+}
+
+body {
+  font-size: var(--font-size-normal);
+  color: var(--font-color);
+  margin: 0;
+
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.btn_link {
+  border: 1px solid #000;
+  padding: 8px;
+  color: #fff;
+  background-color: #000;
+  width: 105px;
+  height: 30px;
+}
+
+.btn_link_transform:hover {
+  transition: 0.4s !important;
+  transform: scale(0.8);
+}
+
+/* ************************* */
+/* HEADER And NAV BAR */
+/* ************************* */
+header {
+  background-image: var(--background-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  word-spacing: 20px;
+}
+
+.nav li {
+  display: inline-flex;
+}
+/* .nav li:not(:last-child) {
+  padding-right: 20px;
+  
+ if word spacing not working 
+} */
+.nav ul {
+  padding: 0;
+  list-style: none;
+}
+.header_text {
+  text-align: left;
+  padding-bottom: 15px;
+  margin: 30px;
+}
+.header_text h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ************************* */
+/* MAIN SECTION SETUP */
+/* ************************* */
+
+main {
+  color: #000;
+  margin: 50px;
+}
+section h2 {
+  font-size: 2.5em;
+  text-decoration: underline;
+}
+section {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  margin: 50px auto;
+}
+#contact {
+  border-bottom: 0px;
+}
+/* .contact {
+  color: #000;
+  padding-bottom: 200px;
+  margin: 50px;
+  border-bottom: 0px;
+} */
+
+/* ***************************************************** */
+/* WORK , ABOUT, FOOTER AND Contact  SECTIONS */
+/* ***************************************************** */
+.work_box {
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.work_box_text {
+  margin-right: 15px;
+}
+.work_box_text p {
+  font-size: 0.7em;
+  color: #262525;
+}
+.work_box_text ul {
+  font-size: 0.9em;
+  color: #262525;
+}
+
+.work_box img {
+  width: 456px;
+  height: 296.483px;
+  max-width: 100%;
+}
+.work_box_links {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.work_box_links a {
+  font-size: 0.8em;
+  text-align: center;
+}
+.work_box_links img {
+  width: auto;
+  height: 2em;
+  margin-left: 25px;
+}
+
+/* text_container for both about and contact  */
+.text_container {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_container a {
+  text-align: center;
+}
+footer {
+  background-color: #262626;
+  font-size: 0.5em;
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  font-weight: bold;
+}
+footer img {
+  height: 3em;
+}
+
+/* ************************* */
+/* MEDIA QUIERiES SETUP */
+/* ************************* */
+
+/* phones */
+@media (min-width: 100px) and (max-width: 414px) {
+  .work_box {
+    flex-direction: column;
+  }
+  .work_box_text {
+    order: 2;
+  }
+  .nav {
+    justify-content: center;
+    margin: 0;
+  }
+  .header_text {
+    font-size: var(--font-size-small);
+    text-align: center;
+  }
+  main {
+    font-size: var(--font-size-small);
+  }
+  .btn_link_transform:hover {
+    transform: none !important;
+  }
+}
+/* tablet  */
+@media (min-width: 420px) and (max-width: 961px) {
+  .nav {
+    justify-content: center;
+    margin: 0;
+  }
+  .header_text {
+    font-size: var(--font-size-small);
+    text-align: center;
+  }
+  .btn_link_transform:hover {
+    transform: none !important;
+  }
+}
